@@ -42,12 +42,13 @@ async function run() {
         for (let i = 0; i < brands.length; i++) {
             await collection.insertOne({
                 name: brands[i],
-
+                slug: slug(brands[i]),
+                logo: "https://avatars.githubusercontent.com/u/97165289"
             });
         }
-        console.log(`brand name inserted.`);
-    } catch (err) {
-        console.error("Error inserting documents:", err);
+        console.log(`Brand name inserted.`);
+    } catch (e) {
+        console.error("Error inserting documents:", e);
     } finally {
         await client.close();
     }

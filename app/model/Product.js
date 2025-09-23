@@ -11,7 +11,6 @@ const ProductSchema = new mongoose.Schema(
         stock: {type: Number, required: true},
         star:{type: String, default: null},
         remark: {type: String, default: null},
-        logo: {type: String, default: null},
         category_id: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'categories'},
         brand_id: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'brands'},
     },
