@@ -1,4 +1,3 @@
-import slug from 'slug'
 import { MongoClient } from 'mongodb';
 import {DATABASE_CONN} from "../settings/config.js";
 import { faker } from '@faker-js/faker';
