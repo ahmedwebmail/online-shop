@@ -11,4 +11,5 @@ const CategorySchema = new mongoose.Schema(
     }
 )
 
-const BrandModel = mongoose.model("categories", CategorySchema);
+const CategoryModel = mongoose.model("categories", CategorySchema);
+export default CategoryModel;
