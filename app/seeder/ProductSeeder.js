@@ -66,12 +66,12 @@ function getRandomNum(min=1000, max=50000) {
  * testing, or populating a staging database.
  */
 function create_product(count=10) {
-    let s1 = faker.word.words({ count: { min: 2, max: 4 } })
+
     const records = [];
     for (let i = 1;  i <= count; i++) {
         records.push({
-              name: s1.charAt(0).toUpperCase() + s1.slice(1),
-              slug: faker.helpers.slugify(faker.lorem.words(3)).toLowerCase(),
+              name: `Product ${i}`,
+              slug: faker.helpers.slugify(`Product ${i}`).toLowerCase(),
               image: "https://example.com/images/product1.jpg",
               price: getRandomNum(),
               stock: getRandomNum(20, 200),
@@ -97,7 +97,7 @@ function create_product(count=10) {
  */
 async function run() {
     try {
-        const record = create_product(200)
+        const record = create_product(2)
         const result = await db.collection("products").insertMany(record)
         console.log(`${result.insertedCount} product name inserted.`);
     } catch (e) {

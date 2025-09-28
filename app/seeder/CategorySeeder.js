@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 import {DATABASE_CONN} from "../settings/config.js";
 
 /**
- * Database: Blog
+ * Database: eshopping
  * Collection: categories
  *
  * This script defines the default set of categories for the blog.
