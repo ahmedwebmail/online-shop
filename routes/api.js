@@ -5,8 +5,9 @@ import * as BrandController from "../app/controller/BrandController.js";
 import * as CategoryController from "../app/controller/CategoryController.js";
 
 //Brand route
+router.get("/brand-list", BrandController.getAllBrand);
 router.post("/create-brand", BrandController.createBrand);
-router.post("/select-brand/:slug", BrandController.selectBrand);
+router.get("/select-brand/:slug", BrandController.getSpecificBrand);
 router.put("/update-brand/:slug", BrandController.updateBrand);
 router.delete("/delete-brand/:slug", BrandController.deleteBrand);
 
