@@ -12,6 +12,7 @@ router.put("/update-brand/:slug", BrandController.updateBrand);
 router.delete("/delete-brand/:slug", BrandController.deleteBrand);
 
 //Category route
+router.get("/category-list", CategoryController.getAllCategory);
 router.post("/create-category", CategoryController.createCategory);
 router.get("/select-category/:slug", CategoryController.selectCategory);
 router.put("/update-category/:slug", CategoryController.updateCategory);

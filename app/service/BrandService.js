@@ -180,8 +180,9 @@ export const addNewBrand = async(brand_data)=>{
  */
 export const modifyBrand = async(brand_data, updated_name)=>{
     try{
-        await BrandModel.updateOne({slug: brand_data.slug}, {name: updated_name.name}, {
-            slug: slug(updated_name.name),
+        await BrandModel.updateOne({slug: brand_data.slug}, {
+            name: updated_name.name,
+            slug: slug(updated_name.name)
         })
         return {
             status: 200,
